@@ -44,7 +44,6 @@ public class LoginController {
                 SakaiLogin login = service.getSakaiLoginPort();
                 //Petición al servicio
                 model.setSesion(login.login(model.getUser(), model.getPassword()));
-                model.setTimestamp(LocalDateTime.now());
                 generateJson();
                 context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Logeado", model.getSesion()));
             } catch (Exception e) {
@@ -60,11 +59,11 @@ public class LoginController {
     
     private void generateJson() {
         List<LoginM> list = readJson();
+        model.setTimestamp(LocalDateTime.now());
         list.add(model);
         //creación del Json
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String json = gson.toJson(list);
-        System.out.println(json);
         //escritura del Json
         try {
             ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream("model.json"));
