@@ -2,6 +2,7 @@ package com.test.dev.exam.controller;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 import com.test.dev.exam.model.LoginM;
 import com.test.dev.exam.service.SakaiLogin;
@@ -11,7 +12,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.net.URL;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -81,7 +81,7 @@ public class LoginController {
             input.close();
             Gson gson = new Gson();
             return gson.fromJson(aux, new TypeToken<List<LoginM>>(){}.getType());
-        } catch (Exception e) {
+        } catch (JsonSyntaxException | IOException | ClassNotFoundException e) {
             return new ArrayList<>();
         }
     }
