@@ -1,0 +1,5 @@
+com\test\dev\exam\model\LoginM.class
+com\test\dev\exam\service\SakaiLoginService.class
+com\test\dev\exam\controller\LoginController.class
+com\test\dev\exam\service\SakaiLogin.class
+com\test\dev\exam\controller\LoginController$1.class

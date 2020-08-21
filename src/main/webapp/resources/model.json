@@ -1,0 +1,20 @@
+[
+    {
+        "user":"admin",
+	"password":"admin",
+	"sesion":"5c89e468-359b-43aa-ab9d-c4959f12cabb",
+	"timestamp":{
+            "date":{
+                "year":2020,
+		"month":8,
+		"day":20
+            },
+            "time":{
+		"hour":18,
+		"minute":2,
+		"second":5,
+		"nano":444127900
+            }
+	}
+    }
+]

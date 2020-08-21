@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://webservices.sakaiproject.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="SakaiLoginService" targetNamespace="http://webservices.sakaiproject.org/">
+  <wsdl:message name="loginToServerGET">
+    <wsdl:part name="id" type="xsd:string">
+    </wsdl:part>
+    <wsdl:part name="pw" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="loginGETResponse">
+    <wsdl:part name="return" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="logoutGETResponse">
+    <wsdl:part name="return" type="xsd:boolean">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="loginToServerResponse">
+    <wsdl:part name="return" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="loginToServer">
+    <wsdl:part name="id" type="xsd:string">
+    </wsdl:part>
+    <wsdl:part name="pw" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="logout">
+    <wsdl:part name="sessionid" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="loginToServerGETResponse">
+    <wsdl:part name="return" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="logoutResponse">
+    <wsdl:part name="return" type="xsd:boolean">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="loginResponse">
+    <wsdl:part name="return" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="login">
+    <wsdl:part name="id" type="xsd:string">
+    </wsdl:part>
+    <wsdl:part name="pw" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="loginGET">
+    <wsdl:part name="id" type="xsd:string">
+    </wsdl:part>
+    <wsdl:part name="pw" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="logoutGET">
+    <wsdl:part name="sessionid" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="SakaiLogin">
+    <wsdl:operation name="loginToServerGET">
+      <wsdl:input message="tns:loginToServerGET" name="loginToServerGET">
+    </wsdl:input>
+      <wsdl:output message="tns:loginToServerGETResponse" name="loginToServerGETResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loginToServer">
+      <wsdl:input message="tns:loginToServer" name="loginToServer">
+    </wsdl:input>
+      <wsdl:output message="tns:loginToServerResponse" name="loginToServerResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logout">
+      <wsdl:input message="tns:logout" name="logout">
+    </wsdl:input>
+      <wsdl:output message="tns:logoutResponse" name="logoutResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdl:input message="tns:login" name="login">
+    </wsdl:input>
+      <wsdl:output message="tns:loginResponse" name="loginResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loginGET">
+      <wsdl:input message="tns:loginGET" name="loginGET">
+    </wsdl:input>
+      <wsdl:output message="tns:loginGETResponse" name="loginGETResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logoutGET">
+      <wsdl:input message="tns:logoutGET" name="logoutGET">
+    </wsdl:input>
+      <wsdl:output message="tns:logoutGETResponse" name="logoutGETResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SakaiLoginServiceSoapBinding" type="tns:SakaiLogin">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="loginToServerGET">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="loginToServerGET">
+        <soap:body namespace="http://webservices.sakaiproject.org/" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="loginToServerGETResponse">
+        <soap:body namespace="http://webservices.sakaiproject.org/" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loginToServer">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="loginToServer">
+        <soap:body namespace="http://webservices.sakaiproject.org/" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="loginToServerResponse">
+        <soap:body namespace="http://webservices.sakaiproject.org/" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logout">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="logout">
+        <soap:body namespace="http://webservices.sakaiproject.org/" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="logoutResponse">
+        <soap:body namespace="http://webservices.sakaiproject.org/" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="login">
+        <soap:body namespace="http://webservices.sakaiproject.org/" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="loginResponse">
+        <soap:body namespace="http://webservices.sakaiproject.org/" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loginGET">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="loginGET">
+        <soap:body namespace="http://webservices.sakaiproject.org/" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="loginGETResponse">
+        <soap:body namespace="http://webservices.sakaiproject.org/" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logoutGET">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="logoutGET">
+        <soap:body namespace="http://webservices.sakaiproject.org/" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="logoutGETResponse">
+        <soap:body namespace="http://webservices.sakaiproject.org/" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SakaiLoginService">
+    <wsdl:port binding="tns:SakaiLoginServiceSoapBinding" name="SakaiLoginPort">
+      <soap:address location="https://qa12-mysql.nightly.sakaiproject.org/sakai-ws/soap/login"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
